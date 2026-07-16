@@ -1,206 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Litops Atelier - браслеты ручной работы</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Litops Atelier — премиальный интернет-магазин браслетов из натуральных камней и высококачественной нержавеющей стали.">
+  <title>Litops Atelier — интернет-магазин браслетов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
 
-<div class="grain"></div>
-
-<!-- NAV -->
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="logo">Litops <span>Atelier</span></a>
-    <nav class="nav-links">
-      <a href="#about">Мастерская</a>
-      <a href="#carousel">Изделия</a>
-      <a href="#materials">Материалы</a>
-      <a href="#order">Заказ</a>
-    </nav>
-    <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="nav-cta">Магазин на WB</a>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <p class="eyebrow">Ручная работа · Натуральные материалы</p>
-    <h1 class="hero-title">Каждый узел -<br>прожитая минута</h1>
-    <p class="hero-sub">Litops Atelier плетёт браслеты из камня, кожи и металла так,<br class="br-desktop">
-      как это делали задолго до конвейера - руками, не спеша, для одного запястья за раз.</p>
-    <div class="hero-actions">
-      <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="btn btn-light">Смотреть на Wildberries</a>
-      <a href="#carousel" class="btn btn-ghost">Изделия</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span></span>
-  </div>
-</section>
-
-<!-- STRIP -->
-<section class="strip">
-  <div class="strip-inner">
-    <div class="strip-item"><strong>100%</strong><span>натуральные материалы</span></div>
-    <div class="strip-item"><strong>1 мастер</strong><span>от эскиза до узла</span></div>
-    <div class="strip-item"><strong>ручное</strong><span>плетение, без литья</span></div>
-    <div class="strip-item"><strong>WB</strong><span>официальный магазин</span></div>
-  </div>
-</section>
-
-<!-- CAROUSEL -->
-<section class="carousel-section" id="carousel">
-  <div class="section-head">
-    <p class="eyebrow eyebrow-dark">Витрина</p>
-    <h2>Браслеты этого сезона</h2>
-    <div class="carousel-nav">
-      <button class="car-btn" id="carPrev" aria-label="Предыдущий">←</button>
-      <button class="car-btn" id="carNext" aria-label="Следующий">→</button>
+  <div class="top-marquee" aria-label="Преимущества магазина">
+    <div class="top-marquee__track">
+      <span><i data-lucide="truck"></i> Бесплатная доставка по России от 7 000 ₽</span>
+      <span><i data-lucide="gift"></i> Подарочная упаковка в каждом заказе</span>
+      <span><i data-lucide="refresh-cw"></i> 30 дней на обмен и возврат</span>
+      <span><i data-lucide="truck"></i> Бесплатная доставка по России от 7 000 ₽</span>
+      <span><i data-lucide="gift"></i> Подарочная упаковка в каждом заказе</span>
+      <span><i data-lucide="refresh-cw"></i> 30 дней на обмен и возврат</span>
     </div>
   </div>
 
-  <div class="carousel-track" id="carTrack">
-    <!-- Cards injected/duplicated via CSS classes below -->
-    <article class="product-card">
-      <div class="product-photo ph-photo"><img src="larimar.webp" alt="Браслет из ларимара" loading="lazy"></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Камень · Ларимар</p>
-        <h3>Карибская вода</h3>
-        <p class="product-price">от 2 400 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
+  <header class="site-header" id="siteHeader">
+    <div class="shell header-shell">
+      <a class="brand" href="#top" aria-label="Litops Atelier — на главную">
+        <img src="assets/brand/logo-mark.svg" alt="" aria-hidden="true">
+        <span>Litops<br><b>atelier</b></span>
+      </a>
 
-    <article class="product-card">
-      <div class="product-photo ph-photo"><img src="labrador.webp" alt="Браслет из лабрадора" loading="lazy"></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Камень · Лабрадор</p>
-        <h3>Северное сияние</h3>
-        <p class="product-price">от 2 300 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#showcase">Коллекции</a>
+        <a href="#about">О бренде</a>
+        <a href="#adminPreview">Админ-панель</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
 
-    <article class="product-card">
-      <div class="product-photo ph-photo"><img src="charoite.webp" alt="Браслет из чароита" loading="lazy"></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Камень · Чароит</p>
-        <h3>Сибирский аметист</h3>
-        <p class="product-price">от 2 100 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-photo ph-4"><span class="ph-label">фото браслета</span></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Металл · Серебро</p>
-        <h3>Плетёная нить</h3>
-        <p class="product-price">от 2 600 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-photo ph-5"><span class="ph-label">фото браслета</span></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Камень · Яшма</p>
-        <h3>Земляной след</h3>
-        <p class="product-price">от 1 800 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
-
-    <article class="product-card">
-      <div class="product-photo ph-6"><span class="ph-label">фото браслета</span></div>
-      <div class="product-info">
-        <p class="product-eyebrow">Кожа · Камень</p>
-        <h3>Дорожный талисман</h3>
-        <p class="product-price">от 2 000 ₽</p>
-        <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="product-link">На Wildberries →</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ABOUT / MATERIALS -->
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="about-photo">
-      <div class="about-photo-frame"><img src="handmade.png" alt="Браслет ручной работы Litops Atelier" class="about-img"></div>
-    </div>
-    <div class="about-text">
-      <p class="eyebrow eyebrow-dark">Мастерская</p>
-      <h2>Сделано руками, не станком</h2>
-      <p>Каждый браслет Litops Atelier начинается с материала, а не с чертежа - камень, кожа
-        или металл сами подсказывают форму. Я подбираю, режу, плету и завязываю каждый узел
-        вручную, без литейных форм и конвейерной сборки.</p>
-      <p>Это значит, что двух одинаковых браслетов не бывает - даже в одной модели рисунок
-        камня или натяжение кожи всегда немного свои.</p>
-      <div class="about-materials" id="materials">
-        <div class="mat"><span class="mat-dot"></span>Натуральный камень</div>
-        <div class="mat"><span class="mat-dot"></span>Растительная кожа</div>
-        <div class="mat"><span class="mat-dot"></span>Латунь и серебро</div>
+      <div class="header-tools">
+        <button class="tool-button" type="button" id="searchButton" aria-label="Поиск"><i data-lucide="search"></i></button>
+        <button class="tool-button tool-button--counter" type="button" id="favoritesButton" aria-label="Избранное"><i data-lucide="heart"></i><span id="favoriteCount">0</span></button>
+        <button class="tool-button cart-pill" type="button" id="cartButton" aria-label="Корзина">
+          <i data-lucide="shopping-bag"></i>
+          <span><b>Корзина</b><small id="cartSummary">0 ₽</small></span>
+          <em id="cartCount">0</em>
+        </button>
+        <button class="tool-button menu-button" type="button" id="menuButton" aria-label="Открыть меню" aria-expanded="false"><i data-lucide="menu"></i></button>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ORDER FORM -->
-<section class="order" id="order">
-  <div class="order-inner">
-    <div class="order-left">
-      <p class="eyebrow">Оформить</p>
-      <h2>Оставьте заявку -<br>я отвечу лично</h2>
-      <p class="order-sub">Расскажите, какой браслет вам нужен: материал, размер запястья,
-        повод. Отвечаю в течение дня и помогу подобрать модель или сделать браслет под заказ.</p>
-      <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener" class="btn btn-outline-light">Или сразу на Wildberries →</a>
+  <main id="top">
+    <section class="hero-wrap">
+      <div class="shell hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Litops Atelier · curated stone jewelry</p>
+            <h1>Spark your stone<br>style with modern<br>bracelet jewelry</h1>
+            <p class="hero-lead">Премиальные браслеты из натуральных камней и высококачественной нержавеющей стали. Графичный дизайн, чистая подача и готовность к подарку.</p>
+            <div class="hero-actions">
+              <a class="main-button main-button--gold" href="#catalog">Каталог <i data-lucide="arrow-right"></i></a>
+              <button class="main-button main-button--dark" type="button" id="openOrderButton">Индивидуальный заказ</button>
+            </div>
+            <div class="hero-features">
+              <span><i data-lucide="gem"></i> Натуральные камни</span>
+              <span><i data-lucide="badge-check"></i> Ручная сборка</span>
+              <span><i data-lucide="package-check"></i> Премиальная упаковка</span>
+            </div>
+          </div>
+
+          <div class="hero-stage reveal reveal--delay">
+            <div class="hero-stage__image">
+              <img id="heroImage" src="assets/products/prehnite.webp" alt="Браслет Litops Atelier">
+            </div>
+            <article class="hero-floating-card" id="featuredCard">
+              <div class="hero-floating-card__head">
+                <span class="tiny-badge" id="featuredBadge">Выбор мастера</span>
+                <span class="hero-floating-card__index">01</span>
+              </div>
+              <img id="featuredImage" src="assets/products/prehnite.webp" alt="Пренит">
+              <p class="hero-floating-card__meta" id="featuredMaterial">Натуральный камень · нержавеющая сталь</p>
+              <h2 id="featuredName">Пренит</h2>
+              <strong id="featuredPrice">5 490 ₽</strong>
+              <div class="hero-floating-card__actions">
+                <button class="round-icon-button favorite-toggle" type="button" data-product-id="prehnite" aria-label="В избранное"><i data-lucide="heart"></i></button>
+                <button class="main-button main-button--gold add-to-cart" type="button" data-product-id="prehnite">В корзину</button>
+              </div>
+              <div class="hero-floating-card__pager">
+                <button class="slider-button" type="button" id="heroPrev" aria-label="Предыдущий"><i data-lucide="arrow-left"></i></button>
+                <span id="heroPager">1 / 6</span>
+                <button class="slider-button" type="button" id="heroNext" aria-label="Следующий"><i data-lucide="arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="promo-row reveal" id="about">
+          <article class="promo-card promo-card--wide">
+            <div>
+              <p class="eyebrow">editorial mood</p>
+              <h2>Design your own collection rhythm</h2>
+              <p>Минималистичный язык бренда, глубокий чёрный фон, мягкие золотистые акценты и натуральные текстуры камней — всё как в модном digital-lookbook.</p>
+            </div>
+            <div class="promo-card__cluster" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="promo-card promo-card--accent">
+            <p class="eyebrow">artist that choose us</p>
+            <h2>6 камней — 6 характеров</h2>
+            <div class="promo-card__thumbs">
+              <img src="assets/products/prehnite.webp" alt="Пренит">
+              <img src="assets/products/larimar.webp" alt="Ларимар">
+              <img src="assets/products/charoite.webp" alt="Чароит">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-head" id="showcase">
+      <div class="shell catalog-head__shell reveal">
+        <div>
+          <p class="eyebrow">New stone jewelry</p>
+          <h2>By Type</h2>
+        </div>
+        <div class="catalog-head__actions">
+          <button class="filter-open-button" id="filterOpenButton" type="button">
+            <i data-lucide="sliders-horizontal"></i>
+            <span>Фильтры</span>
+            <em id="activeFilterCount" hidden>0</em>
+          </button>
+          <label class="sort-select">
+            <span class="sr-only">Сортировка</span>
+            <select id="sortSelect">
+              <option value="featured">Сначала рекомендованные</option>
+              <option value="price-asc">Цена: по возрастанию</option>
+              <option value="price-desc">Цена: по убыванию</option>
+              <option value="name">По названию</option>
+            </select>
+            <i data-lucide="chevron-down"></i>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="shell">
+        <div class="quick-filters reveal" id="categoryBar">
+          <button class="quick-chip is-active" type="button" data-filter="all">All</button>
+          <button class="quick-chip" type="button" data-filter="light">Светлые</button>
+          <button class="quick-chip" type="button" data-filter="color">Цветные</button>
+          <button class="quick-chip" type="button" data-filter="rare">Редкие</button>
+          <button class="quick-chip" type="button" data-filter="steel">Сталь</button>
+          <button class="quick-chip" type="button" data-filter="gift">Подарки</button>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <p class="empty-state" id="emptyState" hidden>По выбранным параметрам изделий не найдено.</p>
+      </div>
+    </section>
+
+    <section class="curated-section">
+      <div class="shell curated-grid reveal">
+        <article class="curated-stat-card">
+          <div class="curated-stat-card__icon"><img src="assets/brand/logo-mark.svg" alt=""></div>
+          <strong>14.500+</strong>
+          <p>просмотров витрины и устойчивый интерес к коллекциям Litops Atelier. Дизайн может работать как премиальный lookbook и как полноценный интернет-магазин.</p>
+          <div class="curated-stat-card__mini-gallery">
+            <img src="assets/products/tourmaline.webp" alt="Турмалин">
+            <img src="assets/products/labradorite.webp" alt="Лабрадор">
+          </div>
+        </article>
+
+        <article class="curated-spotlight">
+          <div class="section-mini-head">
+            <div>
+              <p class="eyebrow">Uncover our most coveted</p>
+              <h2>Litops selection</h2>
+            </div>
+            <button class="ghost-link" type="button" id="openFeaturedDialog">See all <i data-lucide="arrow-up-right"></i></button>
+          </div>
+          <div class="curated-spotlight__body">
+            <div class="spotlight-product" id="spotlightCard"></div>
+            <div class="vertical-highlights">
+              <span>Натуральные минералы</span>
+              <span>Нержавеющая сталь</span>
+              <span>Подарочный ready-to-wear</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="why-strip">
+      <div class="shell why-strip__grid reveal">
+        <div><i data-lucide="users"></i><strong>1 200+</strong><span>довольных клиентов</span></div>
+        <div><i data-lucide="star"></i><strong>4,9 / 5</strong><span>средняя оценка</span></div>
+        <div><i data-lucide="leaf"></i><strong>100%</strong><span>натуральные камни</span></div>
+        <div><i data-lucide="refresh-cw"></i><strong>30 дней</strong><span>на обмен и возврат</span></div>
+      </div>
+    </section>
+
+    <section class="admin-preview" id="adminPreview">
+      <div class="shell admin-preview__grid reveal">
+        <div class="admin-preview__copy">
+          <p class="eyebrow">store management</p>
+          <h2>Полное управление магазином</h2>
+          <p>Новая витрина поддерживает каталог, избранное, корзину, поиск, фильтры и демо-панель администратора. Визуально блок тоже приведён к стилистике референса: тёмная база, тонкие рамки и мягкие золотые акценты.</p>
+          <ul>
+            <li><i data-lucide="check"></i> Управление товарами и коллекциями</li>
+            <li><i data-lucide="check"></i> Заказы и клиенты</li>
+            <li><i data-lucide="check"></i> Аналитика и статистика</li>
+            <li><i data-lucide="check"></i> Drag & Drop загрузка фотографий</li>
+          </ul>
+          <a class="main-button main-button--gold" href="admin.html">Открыть демо-панель <i data-lucide="arrow-right"></i></a>
+        </div>
+
+        <div class="dashboard-card">
+          <aside class="dashboard-card__nav">
+            <div class="dashboard-brand">
+              <img src="assets/brand/logo-mark.svg" alt="">
+              <span>Litops atelier</span>
+            </div>
+            <span class="is-active"><i data-lucide="layout-dashboard"></i> Панель управления</span>
+            <span><i data-lucide="shopping-bag"></i> Заказы</span>
+            <span><i data-lucide="package"></i> Товары</span>
+            <span><i data-lucide="tag"></i> Коллекции</span>
+            <span><i data-lucide="users"></i> Клиенты</span>
+            <span><i data-lucide="bar-chart-3"></i> Аналитика</span>
+          </aside>
+          <div class="dashboard-card__main">
+            <div class="dashboard-head"><b>Обзор</b><small>Последние 30 дней</small></div>
+            <div class="dashboard-stats">
+              <div><span>Заказы</span><b>1 248</b><small>+18%</small></div>
+              <div><span>Выручка</span><b>327 893 ₽</b><small>+24%</small></div>
+              <div><span>Клиенты</span><b>892</b><small>+15%</small></div>
+              <div><span>Конверсия</span><b>2.8%</b><small>+8%</small></div>
+            </div>
+            <div class="dashboard-visuals">
+              <div class="sales-curve">
+                <div class="curve-line"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="curve-labels"><span>Янв</span><span>Фев</span><span>Мар</span><span>Апр</span><span>Май</span><span>Июн</span><span>Июл</span></div>
+              </div>
+              <div class="traffic-card">
+                <div class="traffic-ring"></div>
+                <ul>
+                  <li><span></span> Браслеты 68%</li>
+                  <li><span></span> Коллекции 16%</li>
+                  <li><span></span> Подарки 10%</li>
+                  <li><span></span> Прочее 6%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacts">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top">
+          <img src="assets/brand/logo-mark.svg" alt="" aria-hidden="true">
+          <span>Litops<br><b>atelier</b></span>
+        </a>
+        <p>Украшения из натуральных камней и высококачественной нержавеющей стали.</p>
+        <div class="footer-socials">
+          <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener">WB</a>
+          <a href="#">TG</a>
+          <a href="#">VK</a>
+        </div>
+      </div>
+      <div>
+        <h3>Каталог</h3>
+        <a href="#catalog">Все браслеты</a>
+        <a href="#catalog">Светлые камни</a>
+        <a href="#catalog">Цветные коллекции</a>
+        <a href="#catalog">Подарки</a>
+      </div>
+      <div>
+        <h3>Информация</h3>
+        <a href="#about">О бренде</a>
+        <a href="#">Доставка и оплата</a>
+        <a href="#">Возврат и обмен</a>
+        <a href="admin.html">Демо админ-панели</a>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Будьте в курсе новинок</h3>
+        <p>Подпишитесь на рассылку и получайте эксклюзивные предложения.</p>
+        <form id="newsletterForm">
+          <input type="email" name="email" placeholder="Ваш e-mail" aria-label="Ваш e-mail" required>
+          <button type="submit" aria-label="Подписаться"><i data-lucide="arrow-right"></i></button>
+        </form>
+        <small id="newsletterMessage"></small>
+      </div>
     </div>
-    <form class="order-form" id="orderForm">
-      <label>
-        <span>Имя</span>
-        <input type="text" name="name" placeholder="Как к вам обращаться" required>
-      </label>
-      <label>
-        <span>Контакт</span>
-        <input type="text" name="contact" placeholder="Телефон или Telegram" required>
-      </label>
-      <label>
-        <span>Что вас интересует</span>
-        <textarea name="message" rows="3" placeholder="Материал, размер, повод - что угодно"></textarea>
-      </label>
-      <button type="submit" class="btn btn-light btn-full">Отправить заявку</button>
-      <p class="form-note" id="formNote">Форма демонстрационная - подключите её к своей почте или мессенджеру.</p>
+    <div class="shell footer-bottom">
+      <span>© 2026 Litops Atelier. Все права защищены.</span>
+      <div><a href="#">Политика конфиденциальности</a><a href="#">Публичная оферта</a></div>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="side-drawer" id="cartDrawer" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="drawer-header">
+      <div><p class="eyebrow">Ваш выбор</p><h2 id="cartTitle">Корзина</h2></div>
+      <button class="tool-button drawer-close" type="button" data-close-drawer aria-label="Закрыть"><i data-lucide="x"></i></button>
+    </div>
+    <div class="drawer-content" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="cart-total"><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
+      <a class="main-button main-button--gold main-button--full" href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener">Перейти в магазин на WB</a>
+      <small>Корзина демонстрационная. Покупка оформляется через Wildberries.</small>
+    </div>
+  </aside>
+
+  <aside class="side-drawer" id="favoritesDrawer" aria-hidden="true" aria-labelledby="favoritesTitle">
+    <div class="drawer-header">
+      <div><p class="eyebrow">Сохранённое</p><h2 id="favoritesTitle">Избранное</h2></div>
+      <button class="tool-button drawer-close" type="button" data-close-drawer aria-label="Закрыть"><i data-lucide="x"></i></button>
+    </div>
+    <div class="drawer-content" id="favoriteItems"></div>
+  </aside>
+
+  <aside class="search-panel" id="searchPanel" aria-hidden="true">
+    <div class="shell search-panel__inner">
+      <div class="search-panel__top">
+        <label>
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="Найти камень или браслет..." autocomplete="off">
+        </label>
+        <button class="tool-button" id="searchClose" type="button" aria-label="Закрыть поиск"><i data-lucide="x"></i></button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </aside>
+
+  <dialog class="filter-dialog" id="filterDialog" aria-labelledby="filterTitle">
+    <form class="filter-dialog__panel" id="filterForm" method="dialog">
+      <header class="filter-dialog__header">
+        <div>
+          <p class="eyebrow">search control</p>
+          <h2 id="filterTitle">Фильтры</h2>
+        </div>
+        <button class="tool-button" id="filterCloseButton" type="button" aria-label="Закрыть фильтры"><i data-lucide="x"></i></button>
+      </header>
+
+      <div class="filter-dialog__body">
+        <section class="filter-section">
+          <div class="filter-section__heading">
+            <div>
+              <h3>Price Range</h3>
+              <p>Средняя цена коллекции — <strong id="averagePriceLabel">0 ₽</strong></p>
+            </div>
+            <span id="selectedRangeLabel">0 — 0 ₽</span>
+          </div>
+
+          <div class="price-graph" id="priceGraph">
+            <div class="price-graph__grid"></div>
+            <div class="price-graph__peaks" id="pricePeaks"></div>
+          </div>
+
+          <div class="dual-range" id="dualRange">
+            <div class="dual-range__rail"></div>
+            <div class="dual-range__fill" id="rangeFill"></div>
+            <input id="priceMinRange" type="range" aria-label="Минимальная цена">
+            <input id="priceMaxRange" type="range" aria-label="Максимальная цена">
+          </div>
+
+          <div class="price-inputs">
+            <label><span>Min price</span><div><input id="priceMinInput" type="number" inputmode="numeric"><b>₽</b></div></label>
+            <label><span>Max price</span><div><input id="priceMaxInput" type="number" inputmode="numeric"><b>₽</b></div></label>
+          </div>
+        </section>
+
+        <section class="filter-section">
+          <h3>Цвет камня</h3>
+          <div class="filter-option-grid" id="colorFilterGroup">
+            <label><input type="checkbox" name="color" value="green"><span><i class="swatch swatch--green"></i> Зелёные</span></label>
+            <label><input type="checkbox" name="color" value="blue"><span><i class="swatch swatch--blue"></i> Голубые</span></label>
+            <label><input type="checkbox" name="color" value="purple"><span><i class="swatch swatch--purple"></i> Фиолетовые</span></label>
+            <label><input type="checkbox" name="color" value="gold"><span><i class="swatch swatch--gold"></i> Золотистые</span></label>
+            <label><input type="checkbox" name="color" value="multi"><span><i class="swatch swatch--multi"></i> Мультиколор</span></label>
+            <label><input type="checkbox" name="color" value="dark"><span><i class="swatch swatch--dark"></i> Тёмные</span></label>
+          </div>
+        </section>
+
+        <section class="filter-section filter-section--split">
+          <div>
+            <h3>Фурнитура</h3>
+            <div class="choice-cards">
+              <label><input type="radio" name="hardware" value="all" checked><span>Любая</span></label>
+              <label><input type="radio" name="hardware" value="steel"><span>Нержавеющая сталь</span></label>
+            </div>
+          </div>
+          <div>
+            <h3>Наличие замка</h3>
+            <div class="choice-cards">
+              <label><input type="radio" name="clasp" value="all" checked><span>Не важно</span></label>
+              <label><input type="radio" name="clasp" value="yes"><span>С замком</span></label>
+              <label><input type="radio" name="clasp" value="no"><span>Без замка</span></label>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="filter-dialog__footer">
+        <button class="main-button main-button--dark" id="filterResetButton" type="button">Clear all</button>
+        <button class="main-button main-button--gold" id="filterApplyButton" type="submit">Show <span id="filterResultCount">0</span> bracelets</button>
+      </footer>
     </form>
-  </div>
-</section>
+  </dialog>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <p class="logo footer-logo">Litops <span>Atelier</span></p>
-      <p class="footer-tag">Браслеты ручной работы из натуральных материалов</p>
+  <dialog class="product-dialog" id="productDialog">
+    <button class="tool-button dialog-close" type="button" id="dialogClose" aria-label="Закрыть"><i data-lucide="x"></i></button>
+    <div class="product-dialog__media"><img id="dialogImage" src="" alt=""></div>
+    <div class="product-dialog__content">
+      <p class="eyebrow" id="dialogMaterial"></p>
+      <h2 id="dialogName"></h2>
+      <p id="dialogDescription"></p>
+      <div class="product-dialog__facts" id="dialogFacts"></div>
+      <dl class="product-specs" id="dialogSpecs"></dl>
+      <div class="product-dialog__buy">
+        <strong id="dialogPrice"></strong>
+        <button class="main-button main-button--gold add-to-cart" id="dialogAddToCart" type="button">Добавить в корзину</button>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="#carousel">Изделия</a>
-      <a href="#about">Мастерская</a>
-      <a href="#order">Заказ</a>
-      <a href="https://www.wildberries.ru/seller/4489837" target="_blank" rel="noopener">Wildberries</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Litops Atelier</span>
-    <span>Сделано с заботой о каждом узле</span>
-  </div>
-</footer>
+  </dialog>
 
-<script src="script.js"></script>
+  <dialog class="order-dialog" id="orderDialog">
+    <button class="tool-button dialog-close" type="button" id="orderDialogClose" aria-label="Закрыть"><i data-lucide="x"></i></button>
+    <div class="order-dialog__heading">
+      <p class="eyebrow">индивидуальный заказ</p>
+      <h2>Расскажите, какой браслет вы хотите</h2>
+      <p>Заявка сохранится локально и будет видна в демо-панели администратора этого браузера.</p>
+    </div>
+    <form id="customOrderForm" class="order-form">
+      <label><span>Имя</span><input name="name" required placeholder="Как к вам обращаться"></label>
+      <label><span>Телефон или Telegram</span><input name="contact" required placeholder="Контакт для ответа"></label>
+      <label><span>Размер запястья</span><input name="wrist" placeholder="Например, 17 см"></label>
+      <label class="order-form__wide"><span>Пожелания</span><textarea name="message" rows="4" placeholder="Камни, цвет, бюджет, настроение"></textarea></label>
+      <button class="main-button main-button--gold order-form__wide" type="submit">Сохранить заявку</button>
+      <p class="form-status order-form__wide" id="orderFormStatus"></p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
